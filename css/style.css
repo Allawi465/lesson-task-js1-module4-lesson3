@@ -46,8 +46,8 @@ select {
     background: #ebebeb;
     margin: 1rem;
     text-decoration: none;
-    color: var(--primary-colour);
-    font-size: 2rem;
+    color: black;
+    font-size: 1rem;
 }
 
 .back {
