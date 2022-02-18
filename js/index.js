@@ -1,5 +1,6 @@
 const dropdown = document.querySelector("select");
 const resultsContainer = document.querySelector(".list");
+
 const url = "https://breakingbadapi.com/api/characters/";
 
 dropdown.onchange = function() {
@@ -12,12 +13,14 @@ dropdown.onchange = function() {
     setTimeout(function() {
         resultsContainer.innerHTML = " ";
         for(let i = 1; i <= selectedValue; i++) {
-            resultsContainer.innerHTML = `<a href="detail.html?id=" class="item">${i}</a>`;
+            resultsContainer.innerHTML += `<a href="detail.html?id=" class="item">${i}</a>`;;
         }
 
     }, 2000);
 
 };
+
+
 
 async function getNames() {
     try {
