@@ -11,6 +11,6 @@ dropdown.onchange = function() {
     const selectedValue = this.value;
     resultsContainer.innerHTML = " ";
     for(let i = 1; i <= selectedValue; i++) {
-        resultsContainer.innerHTML += `<a href="detail.html?id=${i}" class="item">${i}</a>`;;
+        resultsContainer.innerHTML += `<a href="detail.html?id=${i}" class="item">${i}</a>`;
     }
 };

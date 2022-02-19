@@ -4,7 +4,7 @@ const params = new URLSearchParams(queryString);
 
 const id = params.get("id");
 
-console.log(id);
+// (console.log(id);
 
 if (id === null) {
     location.href = "index.html";
@@ -30,7 +30,7 @@ async function getNames() {
         createHtml(name)
     
     } catch (error) {
-        console.log(error);
+        console.log(errorresultsContainer);
     }
 }
 
