@@ -6,20 +6,30 @@ const message = document.querySelector("#message");
 const button = document.querySelector("button");
 
 
-function checkLenght (value, len){
-    if(value.trim().length >= len) {
-        return true;
-    } else {
-        return false;
-    }
-}
-
 function buttonTry() {
+
+    if (checkLenght(firstName.value, 1) === true) {
+        firstNameError.style.display = "none";
+    } else {
+        firstNameError.style.display = "block";
+    }
+
+    if (checkLenght(lastName.value, 4) === true) {
+        lastNameError.style.display = "none";
+    } else {
+        lastNameError.style.display = "block";
+    }
+
+    if (validateEmail(email.value) === true) {
+        emailError.style.display = "none";
+    } else {
+        emailError.style.display = "block";
+    }
 
     if (checkLenght(firstName.value, 1) && checkLenght(lastName.value, 4) && validateEmail(email.value)) {
         button.disabled = false;
-    } else {
         
+    } else {
         message.innerHTML = "";
         button.disabled = true;
     }
@@ -40,6 +50,14 @@ function sendForm(event) {
 }
 
 form.addEventListener("submit", sendForm);
+
+function checkLenght (value, len){
+    if(value.trim().length >= len) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
 
 function validateEmail(email) {
