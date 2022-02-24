@@ -33,7 +33,7 @@ function buttonTry() {
         message.innerHTML = "";
         button.disabled = true;
     }
-}
+};
 
 buttonTry()
 
